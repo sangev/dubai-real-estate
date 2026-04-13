@@ -1,65 +1,69 @@
-import Image from "next/image";
+import Link from 'next/link';
+import Hero from '@/components/Hero';
+import PropertyGrid from '@/components/PropertyGrid';
+import AreaGuides from '@/components/AreaGuides';
+import ROICalculator from '@/components/ROICalculator';
+import DeveloperShowcase from '@/components/DeveloperShowcase';
+import { properties } from '@/data/properties';
 
-export default function Home() {
+export default function HomePage() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
+    <main>
+      {/* Hero */}
+      <Hero />
+
+      {/* Featured Properties */}
+      <section className="py-20">
+        <PropertyGrid
+          properties={properties.slice(0, 6)}
+          title="Featured Properties"
+          subtitle="Handpicked luxury properties across Dubai's most sought-after locations"
         />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+        <div className="mt-10 flex justify-center">
+          <Link
+            href="/properties"
+            className="inline-block rounded-md bg-[#C6A55C] px-8 py-3 text-sm font-semibold text-black transition-colors hover:bg-[#D4B978]"
+          >
+            View All Properties
+          </Link>
+        </div>
+      </section>
+
+      {/* Area Guides */}
+      <section className="py-20">
+        <AreaGuides />
+      </section>
+
+      {/* ROI Calculator */}
+      <section className="py-20">
+        <ROICalculator />
+      </section>
+
+      {/* Developer Showcase */}
+      <section className="py-20">
+        <DeveloperShowcase />
+      </section>
+
+      {/* CTA */}
+      <section className="py-20">
+        <div className="mx-auto max-w-3xl rounded-2xl border border-[#C6A55C] bg-[#1A1A1A] px-8 py-16 text-center">
+          <h2 className="text-3xl font-bold text-white sm:text-4xl">
+            Ready to Invest in Dubai?
+          </h2>
+          <p className="mx-auto mt-4 max-w-xl text-base text-gray-400">
+            Explore our full portfolio of premium properties across Dubai&apos;s most exclusive neighborhoods.
+          </p>
+          <Link
+            href="/properties"
+            className="mt-8 inline-block rounded-md bg-[#C6A55C] px-10 py-3 text-sm font-semibold text-black transition-colors hover:bg-[#D4B978]"
+          >
+            Browse All Properties
+          </Link>
+          <p className="mt-6 text-xs font-medium text-[#C6A55C]">
+            Tax-free investment · Golden Visa eligible · 5-8% rental yields
           </p>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
-    </div>
+      </section>
+    </main>
   );
 }
