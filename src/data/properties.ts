@@ -36,9 +36,9 @@ const I = {
   marina: img('1600585154340-be6161a56a0c'),
   interior: img('1582407947304-fd86f028f716'),
   pool: img('1600573472592-401b489a3cdc'),
-  modern: img('1600566753376-12c8ab7c17a7'),
+  modern: img('1486406146926-c627a92ad1ab'),
   night: img('1600585154526-990dced4db0d'),
-  waterfront: img('1600607687644-aac4c3eac7f4'),
+  waterfront: img('1564013799919-ab6e14aa72d1'),
   room: img('1564013799919-ab6e14aa72d1'),
 };
 

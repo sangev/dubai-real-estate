@@ -82,7 +82,7 @@ export const areas: Area[] = [
     avgPricePerSqft: 2515,
     avgRentalYield: 7.2,
     propertyCount: 1100,
-    image: "https://images.unsplash.com/photo-1600566753376-12c8ab7c17a7?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&q=80",
     highlights: [
       "Dubai Water Canal views",
       "Highest rental yields in central Dubai",
@@ -98,7 +98,7 @@ export const areas: Area[] = [
     avgPricePerSqft: 1373,
     avgRentalYield: 5.8,
     propertyCount: 760,
-    image: "https://images.unsplash.com/photo-1600607687644-aac4c3eac7f4?w=800&q=80",
+    image: "https://images.unsplash.com/photo-1564013799919-ab6e14aa72d1?w=800&q=80",
     highlights: [
       "18-hole championship golf course",
       "Family-friendly with parks and green spaces",
